@@ -1,0 +1,298 @@
+@use 'variables' as *;
+@use 'media' as *;
+body {
+    font-family: $font-family;
+    font-size: $font-size-regular;
+    font-weight: $font-weight-regular;
+    line-height: $line-height-regular;
+}
+
+.container {
+    display: flex;
+}
+
+.nav-link,
+.nav-link:hover {
+    color: $color-primary;
+    padding-left: 1rem;
+}
+
+.nav-link:hover {
+    transition: transform 0.5s ease;
+    border: 1px $color-primary solid;
+    border-radius: 10px;
+    color: $color-white;
+    background-color: $color-primary;
+}
+
+.hero {
+    margin: 2rem 0;
+    @include sm {
+        width: 50%;
+    }
+    @include xs {
+        width: 50%;
+    }
+    &__image {
+        @include xs {
+            width: 50%;
+            margin: 0 auto;
+        }
+        @include sm {
+            width: 75%;
+            margin: 0 auto;
+        }
+    }
+    &__title {
+        font-size: $font-size-extra-large-title;
+        font-weight: $font-weight-bold;
+        line-height: $line-height-large;
+        color: $color-primary;
+        @include xs {
+            font-size: $font-size-extra-large-title * 0.4;
+            line-height: $line-height-large * 0.5;
+        }
+        @include sm {
+            font-size: $font-size-extra-large-title * 0.5;
+            line-height: $line-height-large * 0.6;
+        }
+        @include md {
+            font-size: $font-size-extra-large-title * 0.6;
+            line-height: $line-height-large * 0.7;
+        }
+        @include lg {
+            font-size: $font-size-extra-large-title * 0.7;
+            line-height: $line-height-large * 0.8;
+        }
+    }
+    &__description {
+        color: $color-gray;
+        font-size: $font-size-medium;
+        line-height: $line-height-regular;
+        @include xs {
+            font-size: $font-size-medium * 0.7;
+            line-height: $line-height-regular * 0.7;
+        }
+        @include sm {
+            font-size: $font-size-medium * 0.75;
+            line-height: $line-height-regular * 0.8;
+        }
+        @include md {
+            font-size: $font-size-medium * 0.8;
+            line-height: $line-height-regular * 0.9;
+        }
+    }
+}
+
+.button {
+    width: 170px;
+    height: 55px;
+    background-color: $color-secondary;
+    border-radius: 50px;
+    border: 1px solid transparent;
+    color: $color-white;
+    font-weight: $font-weight-bold;
+    line-height: $line-height-regular;
+    @include xs {
+        width: 170px * 0.7;
+        height: 55px * 0.7;
+        font-size: $font-size-regular * 0.7;
+    }
+    @include sm {
+        width: 170px * 0.8;
+        height: 55px * 0.8;
+        font-size: $font-size-regular * 0.8;
+    }
+    @include md {
+        width: 170px * 0.9;
+        height: 55px * 0.9;
+        font-size: $font-size-regular * 0.9;
+    }
+}
+
+.card {
+    border: 1px solid transparent;
+    &__image {
+        width: 88px;
+        height: 88px;
+        @include xs {
+            width: 88px * 0.7;
+            height: 88px * 0.7;
+        }
+        @include sm {
+            width: 88px * 0.8;
+            height: 88px * 0.8;
+        }
+        @include md {
+            width: 88px * 0.9;
+            height: 88px * 0.9;
+        }
+    }
+    &__title {
+        font-weight: $font-weight-semiBold;
+        font-size: $font-size-small-title;
+        line-height: $line-height-medium;
+        &-1 {
+            color: $color-secondary;
+        }
+        &-2 {
+            color: $color-tertiary;
+        }
+        &-3 {
+            color: $color-success;
+        }
+        @include xs {
+            font-size: $font-size-small-title * 0.7;
+            line-height: $line-height-medium * 0.7;
+        }
+        @include sm {
+            font-size: $font-size-small-title * 0.8;
+            line-height: $line-height-medium * 0.8;
+        }
+        @include md {
+            font-size: $font-size-small-title * 0.9;
+            line-height: $line-height-medium * 0.9;
+        }
+    }
+    &__description {
+        font-size: $font-size-regular;
+        line-height: $line-height-regular;
+        color: $color-gray;
+        @include xs {
+            font-size: $font-size-regular * 0.7;
+            line-height: $line-height-regular * 0.7;
+        }
+        @include sm {
+            font-size: $font-size-regular * 0.8;
+            line-height: $line-height-regular * 0.8;
+        }
+        @include md {
+            font-size: $font-size-regular * 0.9;
+            line-height: $line-height-regular * 0.9;
+        }
+    }
+}
+
+.section {
+    margin: 3rem 0;
+    @include sm {
+        width: 70%;
+    }
+    @include xs {
+        width: 80%;
+    }
+    &__image {
+        @include xs {
+            width: 70%;
+            margin: 0 auto;
+        }
+        @include sm {
+            width: 75%;
+            margin: 0 auto;
+        }
+    }
+    &__title {
+        font-size: $font-size-large-title;
+        font-weight: $font-weight-semiBold;
+        line-height: $line-height-medium;
+        color: $color-primary;
+        @include xs {
+            font-size: $font-size-large-title * 0.4;
+            line-height: $line-height-large * 0.4;
+        }
+        @include sm {
+            font-size: $font-size-large-title * 0.5;
+            line-height: $line-height-large * 0.5;
+        }
+        @include md {
+            font-size: $font-size-large-title * 0.6;
+            line-height: $line-height-large * 0.6;
+        }
+        @include lg {
+            font-size: $font-size-large-title * 0.7;
+            line-height: $line-height-large * 0.7;
+        }
+    }
+    &__description {
+        color: $color-gray;
+        font-size: $font-size-regular;
+        line-height: $line-height-regular;
+        @include xs {
+            font-size: $font-size-regular * 0.7;
+            line-height: $line-height-regular * 0.7;
+        }
+        @include sm {
+            font-size: $font-size-regular * 0.75;
+            line-height: $line-height-regular * 0.8;
+        }
+        @include md {
+            font-size: $font-size-regular * 0.8;
+            line-height: $line-height-regular * 0.9;
+        }
+    }
+}
+
+footer {
+    background-color: $color-primary;
+    color: $color-white;
+    height: 378px;
+    .title {
+        font-weight: $font-weight-bold;
+        font-size: $font-size-medium-title;
+        line-height: $line-height-medium;
+        @include xs {
+            font-size: $font-size-medium-title * 0.7;
+            line-height: $line-height-medium * 0.7;
+        }
+        @include sm {
+            font-size: $font-size-medium-title * 0.75;
+            line-height: $line-height-medium * 0.8;
+        }
+        @include md {
+            font-size: $font-size-medium-title * 0.8;
+            line-height: $line-height-medium * 0.9;
+        }
+    }
+    .links {
+        font-weight: $font-weight-regular;
+        font-size: $font-size-regular;
+        line-height: $line-height-regular;
+        list-style: none;
+        width: 70%;
+        margin: 1.5rem 0;
+        @include xs {
+            font-size: $font-size-regular * 0.7;
+            line-height: $line-height-medium * 0.7;
+        }
+        @include sm {
+            font-size: $font-size-regular * 0.75;
+            line-height: $line-height-medium * 0.8;
+        }
+        @include md {
+            font-size: $font-size-regular * 0.8;
+            line-height: $line-height-medium * 0.9;
+        }
+        a {
+            text-decoration: none;
+            color: $color-white;
+        }
+    }
+    .icons {
+        .fa-brands {
+            font-size: $font-size-regular * 2.5;
+            margin: 1.2rem;
+            @include xs {
+                font-size: $font-size-regular;
+            }
+            @include sm {
+                font-size: $font-size-regular * 1.5;
+            }
+            @include md {
+                font-size: $font-size-regular * 1.7;
+            }
+            @include lg {
+                font-size: $font-size-regular * 2;
+            }
+        }
+    }
+}
